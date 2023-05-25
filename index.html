@@ -11,22 +11,23 @@
 <body class="body">
     <main>
         <section>
-            <h1 id="ciudad">Rio Tercero</h1>
+            <input class="nombreCiudad" id="ciudad" value="BUENOS AIRES" readonly disabled>
     
             <aside class="contenedorDescripcionTemp">
-                <p class="descripcion" id="descripcion">Nublado</p>
-                <p class="temperatura" id="temperatura">22°C</p>
+                <input class="descripcion" id="descripcion" value="DESPEJADO" readonly disabled>
+                <p class="descripcion">Temperatura Actual:</p>
+                <input class="temperatura" id="temperatura" value="22°C" readonly disabled>
             </aside>
         </section>
 
         <form id="form">
             <section>
                 <label for="ciudad">Ciudad:</label>
-                <input type="text" id="city" name="ciudad" required>
+                <input type="text" id="city" required>
             </section>
             <section>
                 <label for="ciudad">Pais:</label>
-                <select name="pais" id="country" required>
+                <select id="country" required>
                     <option disabled selected value="">Seleccione un pais</option>
                     <option value="AR">Argentina</option>
                 </select>

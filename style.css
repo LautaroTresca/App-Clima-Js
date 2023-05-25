@@ -25,11 +25,16 @@ main{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-h1{
+.nombreCiudad, .descripcion, .temperatura{
+    background-color: transparent;
     text-shadow: 0px 3px 4px #0000007d;
     padding-top: 1rem;
     display: block;
     text-align: center;
+    backdrop-filter: none;
+    border: none;
+    font-size: 2rem;
+    color: #2c2c2c;
 }
 
 .contenedorDescripcionTemp{
