@@ -99,7 +99,7 @@ select{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
     main{
         margin: 1rem; 
     }
