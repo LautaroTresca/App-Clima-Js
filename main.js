@@ -33,7 +33,6 @@ function cambiarPresentacion() {
 
 function cambiarInfoClima() {
     main.style.animation = "fadeInLeft 1.8s";
-    main.style.height = "800px";
     seccionInfo.style.display = "flex";
     if(info.valueOf() === "nubes"){
         imagenClima.src = "images/nube.png";
