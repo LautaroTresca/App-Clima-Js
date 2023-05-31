@@ -32,7 +32,7 @@ function cambiarPresentacion() {
 }
 
 function cambiarInfoClima() {
-    main.style.animation = "fadeInLeft 1.8s";
+    main.style.animation = "fadeIn 1s";
     seccionInfo.style.display = "flex";
     if(info.valueOf() === "nubes"){
         imagenClima.src = "images/nube.png";
@@ -49,8 +49,8 @@ function cambiarInfoClima() {
 }
 
 form.addEventListener("submit", (event) => {
-    main.style.animation = "fadeOutRight 1.8s"
-    event.preventDefault()
+    main.style.animation = "fadeOut 1.7s";
+    event.preventDefault();
     const city = document.getElementById("city").value;
     llamarAPI(city,apiKey);
     setTimeout(cambiarPresentacion, 1500);
