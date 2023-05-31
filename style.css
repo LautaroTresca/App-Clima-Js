@@ -4,7 +4,7 @@
 }
 
 .body{
-    background-color: #71aaff;
+    background-color: #173e5e;
     height: max-content;
     display: flex;
     justify-content: center;
@@ -15,10 +15,9 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 800px;
     width: 500px;
     background: rgba( 255, 255, 255, 0.5 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.466);
     backdrop-filter: blur( 20px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -69,7 +68,18 @@ form{
     padding: 0rem 2rem 2rem 2rem;
 }
 
+.inputCiudad{
+    height: 3rem;
+    font-size: large;
+    font-weight: 500;
+}
+
+.botonEnviar{
+    height: 3rem;
+}
+
 input{
+    text-align: center;
     width: 100%;
     background: rgba( 255, 255, 255, 0.5 );
     backdrop-filter: blur( 20px );

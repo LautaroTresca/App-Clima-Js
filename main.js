@@ -2,6 +2,8 @@ const apiKey = "371db5a5593ac42270ca5901112ec179";
 const form = document.getElementById("form");
 const alturaPantalla = window.innerHeight;
 const imagenClima = document.getElementById("imagenClima");
+const seccionInfo = document.querySelector(".seccionInfo");
+const main = document.querySelector("main")
 let ciudad = document.getElementById("ciudad");
 let descripcion = document.getElementById("descripcion");
 let temperatura = document.getElementById("temperatura");
@@ -9,8 +11,13 @@ let info = "";
 let temp = "";
 document.body.style.height = alturaPantalla + "px";
 
-function llamarAPI(city,countryCode,apiKey){
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${apiKey}&units=metric&lang=es`)
+if(ciudad.value == ""){
+    seccionInfo.style.display = "none";
+    main.style.height = "fit-content";
+}
+
+function llamarAPI(city,apiKey){
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=es`)
     .then((response) => response.json())
     .then((json) => {
         info = json.weather[0].description;
@@ -25,6 +32,9 @@ function cambiarPresentacion() {
 }
 
 function cambiarInfoClima() {
+    main.style.animation = "fadeInLeft 1.8s";
+    main.style.height = "800px";
+    seccionInfo.style.display = "flex";
     if(info.valueOf() === "nubes"){
         imagenClima.src = "images/nube.png";
         descripcion.value = "Nuboso";
@@ -40,10 +50,10 @@ function cambiarInfoClima() {
 }
 
 form.addEventListener("submit", (event) => {
+    main.style.animation = "fadeOutRight 1.8s"
     event.preventDefault()
     const city = document.getElementById("city").value;
-    const countryCode = document.getElementById("country").value;
-    llamarAPI(city,countryCode,apiKey);
+    llamarAPI(city,apiKey);
     setTimeout(cambiarPresentacion, 1500);
 })
 
