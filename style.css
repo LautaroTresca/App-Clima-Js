@@ -30,7 +30,7 @@ main{
     align-items: center;
 }
 
-.nombreCiudad, .descripcion, .temperatura{
+.nombreCiudad, .descripcion, .temperatura, .humedad, .viento, .sensacion-termica{
     background-color: transparent;
     text-shadow: 0px 3px 4px #0000007d;
     display: block;
@@ -60,6 +60,22 @@ img{
 .temperatura{
     text-align: center;
     font-size: 7rem;
+}
+
+.humedad{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+.sensacion-termica{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.viento{
+    text-align: center;
+    font-size: 1.5rem;
 }
 
 form{
